@@ -115,14 +115,3 @@ INSERT INTO order_item(
 	('3', '9', '1', '20230404 10:01:00', null , null, '16'),
 	('3', '14', '1', '20230404 10:01:00', null , null, '9');
 	
-SELECT * FROM customer;
-SELECT * FROM type;
-SELECT * FROM menu;
-SELECT * FROM order_header;
-SELECT * FROM order_item;
-
--- Popular order
-SELECT menu.menu_item_id, menu.item_title, SUM(order_item.qty) FROM order_item
-LEFT JOIN menu ON order_item.item_id = menu.menu_item_id
-GROUP BY menu_item_id
-ORDER BY sum desc, item_title asc
