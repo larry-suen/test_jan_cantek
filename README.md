@@ -1,4 +1,4 @@
-# test_jan_cantek
+# SQL Project
 
 This is a database for POS in a restaurant. The POS database includes 5 tables:
 
